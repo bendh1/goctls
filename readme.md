@@ -6,7 +6,7 @@
 ## Install | 安装方法
 
 ```shell
-go install github.com/suyuan32/goctls@latest
+go install github.com/bendh1/goctls@latest
 ```
 
 ## Features | 特性
@@ -29,7 +29,7 @@ go install github.com/suyuan32/goctls@latest
 - 支持多种额外插件如GORM, RocketMQ
 - 对Simple Admin 的针对性优化
 - rpc logic group分组
-- 全面支持 Ent 代码生成 
+- 全面支持 Ent 代码生成
 
 ## 本项目遵循 GPL 3.0 协议， 使用请注明出处. 原许可证位于 originallicense 文件夹下，为 MIT 协议.
 ## This project uses the GPL 3.0 license, please indicate the source when using it. The original license is located in the originallicense folder under the MIT license.
