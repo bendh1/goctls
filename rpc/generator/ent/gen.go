@@ -258,7 +258,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 			}
 			continue
 		} else if entx.IsOnlyEntType(v.Info.Type.String()) {
-			singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(*in.%s)))\n\t}\n",
+			singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(in.%s)))\n\t}\n",
 				parser.CamelCase(v.Name),
 				parser.CamelCase(v.Name),
 				v.Info.Type.String(),
@@ -277,7 +277,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 							parser.CamelCase(v.Name)))
 						hasUUID = true
 					} else {
-						singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(*in.%s)))\n\t}\n",
+						singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(in.%s)))\n\t}\n",
 							parser.CamelCase(v.Name),
 							entx.ConvertSpecificNounToUpper(v.Name),
 							v.Info.Type.String(),
@@ -291,7 +291,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 				}
 			} else {
 				if entx.IsGoTypeNotPrototype(v.Info.Type.String()) {
-					singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(*in.%s)))\n\t}\n",
+					singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(in.%s)))\n\t}\n",
 						parser.CamelCase(v.Name),
 						parser.CamelCase(v.Name),
 						v.Info.Type.String(),

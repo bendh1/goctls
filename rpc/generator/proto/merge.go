@@ -186,6 +186,7 @@ func genProtoString(data parser.Proto) string {
 				prefixStr = "repeated "
 			}
 			if protox.ProtoField.Optional {
+				// prefixStr = "optional "
 				prefixStr = "optional "
 			}
 
