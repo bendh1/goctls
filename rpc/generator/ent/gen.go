@@ -538,11 +538,11 @@ func GenProtoData(schema *load.Schema, g GenEntLogicContext) (string, string, er
 		createString, _ := format.FileNamingFormat(g.ProtoFieldStyle, "created_at")
 		updateString, _ := format.FileNamingFormat(g.ProtoFieldStyle, "updated_at")
 
-		timeField = fmt.Sprintf("  optional int64 %s = 2;\n  optional int64 %s = 3;\n", createString, updateString)
+		timeField = fmt.Sprintf("  int64 %s = 2;\n  int64 %s = 3;\n", createString, updateString)
 		index = 4
 	}
 
-	protoMessage.WriteString(fmt.Sprintf("message %sInfo {\n  optional %s %s = 1;\n%s",
+	protoMessage.WriteString(fmt.Sprintf("message %sInfo {\n  %s %s = 1;\n%s",
 		schemaNameCamelCase, entx.ConvertIDType(g.UseUUID, strings.ToLower(g.IdType)), idString, timeField))
 
 	for i, v := range schema.Fields {
@@ -555,7 +555,7 @@ func GenProtoData(schema *load.Schema, g GenEntLogicContext) (string, string, er
 			continue
 		} else if v.Name == "status" {
 			statusString, _ := format.FileNamingFormat(g.ProtoFieldStyle, v.Name)
-			protoMessage.WriteString(fmt.Sprintf("%s  optional uint32 %s = %d;\n", fieldComment, statusString, index))
+			protoMessage.WriteString(fmt.Sprintf("%s  uint32 %s = %d;\n", fieldComment, statusString, index))
 			hasStatus = true
 			index++
 		} else {
@@ -567,9 +567,9 @@ func GenProtoData(schema *load.Schema, g GenEntLogicContext) (string, string, er
 
 			formatedString, _ := format.FileNamingFormat(g.ProtoFieldStyle, v.Name)
 			if entx.IsTimeProperty(v.Info.Type.String()) {
-				protoMessage.WriteString(fmt.Sprintf("%s  optional int64  %s = %d;%s", fieldComment, formatedString, index, endString))
+				protoMessage.WriteString(fmt.Sprintf("%s  int64  %s = %d;%s", fieldComment, formatedString, index, endString))
 			} else {
-				protoMessage.WriteString(fmt.Sprintf("%s  optional %s %s = %d;%s", fieldComment, entx.ConvertEntTypeToProtoType(v.Info.Type.String()),
+				protoMessage.WriteString(fmt.Sprintf("%s  %s %s = %d;%s", fieldComment, entx.ConvertEntTypeToProtoType(v.Info.Type.String()),
 					formatedString, index, endString))
 			}
 
@@ -599,7 +599,7 @@ func GenProtoData(schema *load.Schema, g GenEntLogicContext) (string, string, er
 		if v.Info.Type.String() == "string" && !strings.Contains(strings.ToLower(v.Name), "uuid") && count < g.SearchKeyNum {
 			if i < len(schema.Fields) && count < g.SearchKeyNum {
 				formatedString, _ := format.FileNamingFormat(g.ProtoFieldStyle, v.Name)
-				protoMessage.WriteString(fmt.Sprintf("  optional %s %s = %d;\n", entx.ConvertEntTypeToProtoType(v.Info.Type.String()),
+				protoMessage.WriteString(fmt.Sprintf("  %s %s = %d;\n", entx.ConvertEntTypeToProtoType(v.Info.Type.String()),
 					formatedString, index))
 				index++
 				count++
