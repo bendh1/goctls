@@ -187,7 +187,7 @@ func genProtoString(data parser.Proto) string {
 			}
 			if protox.ProtoField.Optional {
 				// prefixStr = "optional "
-				prefixStr = "optional "
+				prefixStr = ""
 			}
 
 			fieldComment := ""
