@@ -5,7 +5,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/suyuan32/goctls/util"
+	"github.com/bendh1/goctls/util"
 	"github.com/zeromicro/go-zero/core/stringx"
 )
 

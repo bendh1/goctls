@@ -8,12 +8,12 @@ import (
 
 	"github.com/zeromicro/go-zero/core/collection"
 
-	conf "github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util"
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/pathx"
-	"github.com/suyuan32/goctls/util/stringx"
+	conf "github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/pathx"
+	"github.com/bendh1/goctls/util/stringx"
 )
 
 const functionTemplate = `

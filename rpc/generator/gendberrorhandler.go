@@ -6,11 +6,11 @@ import (
 
 	"github.com/iancoleman/strcase"
 
-	conf "github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util"
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/pathx"
+	conf "github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 //go:embed dberrorhandler.tpl

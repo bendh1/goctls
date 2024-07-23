@@ -17,17 +17,18 @@ package template
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
 	"path/filepath"
+
+	"github.com/duke-git/lancet/v2/fileutil"
 
 	"github.com/gookit/color"
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/spf13/cobra"
 
-	"github.com/suyuan32/goctls/rpc/execx"
-	"github.com/suyuan32/goctls/util/console"
-	"github.com/suyuan32/goctls/util/env"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/bendh1/goctls/util/console"
+	"github.com/bendh1/goctls/util/env"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 var (

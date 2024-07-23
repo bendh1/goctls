@@ -3,7 +3,6 @@ package gogen
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
 	"os"
 	"path"
 	"path/filepath"
@@ -12,23 +11,25 @@ import (
 	"sync"
 	"time"
 
+	"github.com/duke-git/lancet/v2/fileutil"
+
 	"github.com/gookit/color"
 	"github.com/iancoleman/strcase"
 	"github.com/spf13/cobra"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/suyuan32/goctls/api/gogen/ent"
-	"github.com/suyuan32/goctls/util/format"
+	"github.com/bendh1/goctls/api/gogen/ent"
+	"github.com/bendh1/goctls/util/format"
 
-	apiformat "github.com/suyuan32/goctls/api/format"
-	"github.com/suyuan32/goctls/api/gogen/proto"
-	"github.com/suyuan32/goctls/api/parser"
-	apiutil "github.com/suyuan32/goctls/api/util"
-	"github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/pkg/golang"
-	"github.com/suyuan32/goctls/rpc/execx"
-	"github.com/suyuan32/goctls/util"
-	"github.com/suyuan32/goctls/util/pathx"
+	apiformat "github.com/bendh1/goctls/api/format"
+	"github.com/bendh1/goctls/api/gogen/proto"
+	"github.com/bendh1/goctls/api/parser"
+	apiutil "github.com/bendh1/goctls/api/util"
+	"github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/pkg/golang"
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/bendh1/goctls/util"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 const tmpFile = "%s-%d"

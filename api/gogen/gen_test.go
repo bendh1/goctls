@@ -10,9 +10,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/suyuan32/goctls/api/parser"
-	"github.com/suyuan32/goctls/rpc/execx"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/api/parser"
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 var (

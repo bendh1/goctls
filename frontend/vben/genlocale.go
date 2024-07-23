@@ -23,9 +23,9 @@ import (
 
 	"github.com/iancoleman/strcase"
 
-	"github.com/suyuan32/goctls/api/spec"
-	"github.com/suyuan32/goctls/util"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/api/spec"
+	"github.com/bendh1/goctls/util"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 func genLocale(g *GenContext) error {

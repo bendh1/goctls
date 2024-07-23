@@ -3,8 +3,8 @@ package env
 import (
 	"fmt"
 
+	"github.com/bendh1/goctls/pkg/env"
 	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/pkg/env"
 )
 
 func write(_ *cobra.Command, args []string) error {

@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/util"
+	"github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/util"
 )
 
 //go:embed default_en.json

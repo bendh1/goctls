@@ -1,17 +1,17 @@
 package extra
 
 import (
-	"github.com/suyuan32/goctls/extra/ent/importschema"
-	"github.com/suyuan32/goctls/extra/ent/localmixin"
-	"github.com/suyuan32/goctls/extra/ent/schema"
-	"github.com/suyuan32/goctls/extra/ent/template"
-	"github.com/suyuan32/goctls/extra/i18n"
-	"github.com/suyuan32/goctls/extra/initlogic"
-	"github.com/suyuan32/goctls/extra/logviewer"
-	"github.com/suyuan32/goctls/extra/makefile"
-	"github.com/suyuan32/goctls/extra/middleware"
-	"github.com/suyuan32/goctls/extra/proto2api"
-	"github.com/suyuan32/goctls/internal/cobrax"
+	"github.com/bendh1/goctls/extra/ent/importschema"
+	"github.com/bendh1/goctls/extra/ent/localmixin"
+	"github.com/bendh1/goctls/extra/ent/schema"
+	"github.com/bendh1/goctls/extra/ent/template"
+	"github.com/bendh1/goctls/extra/i18n"
+	"github.com/bendh1/goctls/extra/initlogic"
+	"github.com/bendh1/goctls/extra/logviewer"
+	"github.com/bendh1/goctls/extra/makefile"
+	"github.com/bendh1/goctls/extra/middleware"
+	"github.com/bendh1/goctls/extra/proto2api"
+	"github.com/bendh1/goctls/internal/cobrax"
 )
 
 var (

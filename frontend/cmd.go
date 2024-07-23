@@ -15,8 +15,8 @@
 package frontend
 
 import (
-	"github.com/suyuan32/goctls/frontend/vben"
-	"github.com/suyuan32/goctls/internal/cobrax"
+	"github.com/bendh1/goctls/frontend/vben"
+	"github.com/bendh1/goctls/internal/cobrax"
 )
 
 var (

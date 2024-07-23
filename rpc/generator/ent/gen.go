@@ -19,14 +19,15 @@ import (
 	_ "embed"
 	"errors"
 	"fmt"
-	"github.com/gookit/color"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 	"text/template"
 
-	"github.com/suyuan32/goctls/util/console"
+	"github.com/gookit/color"
+
+	"github.com/bendh1/goctls/util/console"
 
 	"entgo.io/ent/entc"
 	"entgo.io/ent/entc/gen"
@@ -34,12 +35,12 @@ import (
 	"github.com/iancoleman/strcase"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util/ctx"
-	"github.com/suyuan32/goctls/util/entx"
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/pathx"
-	"github.com/suyuan32/goctls/util/protox"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util/ctx"
+	"github.com/bendh1/goctls/util/entx"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/pathx"
+	"github.com/bendh1/goctls/util/protox"
 )
 
 const regularPerm = 0o666

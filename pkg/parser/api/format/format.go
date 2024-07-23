@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/suyuan32/goctls/pkg/parser/api/parser"
+	"github.com/bendh1/goctls/pkg/parser/api/parser"
 )
 
 // File formats the api file.

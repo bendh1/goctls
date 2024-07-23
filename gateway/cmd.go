@@ -2,16 +2,17 @@ package gateway
 
 import (
 	_ "embed"
-	"github.com/duke-git/lancet/v2/fileutil"
 	"os"
 	"path/filepath"
 	"strings"
 	"text/template"
 
+	"github.com/duke-git/lancet/v2/fileutil"
+
+	"github.com/bendh1/goctls/internal/cobrax"
+	"github.com/bendh1/goctls/util/ctx"
+	"github.com/bendh1/goctls/util/pathx"
 	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/internal/cobrax"
-	"github.com/suyuan32/goctls/util/ctx"
-	"github.com/suyuan32/goctls/util/pathx"
 )
 
 var (

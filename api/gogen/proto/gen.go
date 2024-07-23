@@ -18,25 +18,26 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/gookit/color"
-	"github.com/suyuan32/goctls/rpc/execx"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 	"text/template"
 
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/gookit/color"
+
 	"github.com/emicklei/proto"
 	"github.com/zeromicro/go-zero/core/logx"
 
 	"github.com/iancoleman/strcase"
 
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util/ctx"
-	"github.com/suyuan32/goctls/util/entx"
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/pathx"
-	"github.com/suyuan32/goctls/util/protox"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util/ctx"
+	"github.com/bendh1/goctls/util/entx"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/pathx"
+	"github.com/bendh1/goctls/util/protox"
 )
 
 const regularPerm = 0o666

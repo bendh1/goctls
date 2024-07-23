@@ -1,6 +1,6 @@
 package kube
 
-import "github.com/suyuan32/goctls/internal/cobrax"
+import "github.com/bendh1/goctls/internal/cobrax"
 
 var (
 	varStringName            string

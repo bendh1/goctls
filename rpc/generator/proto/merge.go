@@ -24,8 +24,8 @@ import (
 
 	"github.com/gookit/color"
 
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util/protox"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util/protox"
 )
 
 type ProtoContext struct {

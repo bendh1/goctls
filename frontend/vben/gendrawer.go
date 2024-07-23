@@ -20,7 +20,7 @@ import (
 
 	"github.com/iancoleman/strcase"
 
-	"github.com/suyuan32/goctls/util"
+	"github.com/bendh1/goctls/util"
 )
 
 func genDrawer(g *GenContext) error {

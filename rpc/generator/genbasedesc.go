@@ -6,10 +6,10 @@ import (
 
 	"github.com/iancoleman/strcase"
 
-	conf "github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util"
-	"github.com/suyuan32/goctls/util/pathx"
+	conf "github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 func (g *Generator) GenBaseDesc(ctx DirContext, _ parser.Proto, cfg *conf.Config, c *ZRpcContext) error {

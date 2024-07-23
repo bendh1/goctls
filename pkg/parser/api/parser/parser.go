@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/suyuan32/goctls/pkg/parser/api/ast"
-	"github.com/suyuan32/goctls/pkg/parser/api/scanner"
-	"github.com/suyuan32/goctls/pkg/parser/api/token"
+	"github.com/bendh1/goctls/pkg/parser/api/ast"
+	"github.com/bendh1/goctls/pkg/parser/api/scanner"
+	"github.com/bendh1/goctls/pkg/parser/api/token"
 )
 
 const idAPI = "api"

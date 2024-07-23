@@ -3,12 +3,13 @@ package drone
 import (
 	_ "embed"
 	"fmt"
-	"github.com/gookit/color"
-	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/util/pathx"
 	"os"
 	"strings"
 	"text/template"
+
+	"github.com/bendh1/goctls/util/pathx"
+	"github.com/gookit/color"
+	"github.com/spf13/cobra"
 )
 
 var (

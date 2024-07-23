@@ -8,8 +8,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/suyuan32/goctls/api/spec"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/api/spec"
+	"github.com/bendh1/goctls/util/pathx"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

@@ -10,8 +10,8 @@ import (
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 
-	"github.com/suyuan32/goctls/util/console"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/util/console"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 type GenContext struct {

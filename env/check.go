@@ -2,20 +2,21 @@ package env
 
 import (
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
-	"github.com/suyuan32/goctls/util/pathx"
 	"path/filepath"
 	"strings"
 	"time"
 
+	"github.com/bendh1/goctls/util/pathx"
+	"github.com/duke-git/lancet/v2/fileutil"
+
 	"github.com/spf13/cobra"
 
-	"github.com/suyuan32/goctls/pkg/env"
-	"github.com/suyuan32/goctls/pkg/goswagger"
-	"github.com/suyuan32/goctls/pkg/protoc"
-	"github.com/suyuan32/goctls/pkg/protocgengo"
-	"github.com/suyuan32/goctls/pkg/protocgengogrpc"
-	"github.com/suyuan32/goctls/util/console"
+	"github.com/bendh1/goctls/pkg/env"
+	"github.com/bendh1/goctls/pkg/goswagger"
+	"github.com/bendh1/goctls/pkg/protoc"
+	"github.com/bendh1/goctls/pkg/protocgengo"
+	"github.com/bendh1/goctls/pkg/protocgengogrpc"
+	"github.com/bendh1/goctls/util/console"
 )
 
 type bin struct {
@@ -72,7 +73,7 @@ func Prepare(install, force, verbose, clear bool) error {
 		} else {
 			log.Error(`
 [goctl-env]: check env finish, some dependencies is not found in PATH, you can execute
-command 'goctl env check --install' to install it, for details, please execute command 
+command 'goctl env check --install' to install it, for details, please execute command
 'goctl env check --help'`)
 		}
 	}()

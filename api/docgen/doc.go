@@ -13,9 +13,9 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 
-	"github.com/suyuan32/goctls/api/spec"
-	apiutil "github.com/suyuan32/goctls/api/util"
-	"github.com/suyuan32/goctls/util"
+	"github.com/bendh1/goctls/api/spec"
+	apiutil "github.com/bendh1/goctls/api/util"
+	"github.com/bendh1/goctls/util"
 )
 
 //go:embed markdown.tpl

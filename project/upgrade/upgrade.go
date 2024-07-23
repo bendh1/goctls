@@ -2,11 +2,12 @@ package upgrade
 
 import (
 	"errors"
+	"os"
+
+	conf "github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/rpc/execx"
 	"github.com/gookit/color"
 	"github.com/spf13/cobra"
-	conf "github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/rpc/execx"
-	"os"
 )
 
 var (

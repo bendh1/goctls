@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"github.com/suyuan32/goctls/api/parser/g4/ast"
-	"github.com/suyuan32/goctls/api/parser/g4/gen/api"
-	"github.com/suyuan32/goctls/api/spec"
-	"github.com/suyuan32/goctls/pkg/env"
-	apiParser "github.com/suyuan32/goctls/pkg/parser/api/parser"
+	"github.com/bendh1/goctls/api/parser/g4/ast"
+	"github.com/bendh1/goctls/api/parser/g4/gen/api"
+	"github.com/bendh1/goctls/api/spec"
+	"github.com/bendh1/goctls/pkg/env"
+	apiParser "github.com/bendh1/goctls/pkg/parser/api/parser"
 )
 
 type parser struct {

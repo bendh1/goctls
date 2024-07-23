@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/suyuan32/goctls/api/parser/g4/gen/api"
+	"github.com/bendh1/goctls/api/parser/g4/gen/api"
 )
 
 type (

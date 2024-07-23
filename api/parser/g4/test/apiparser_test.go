@@ -6,15 +6,15 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/bendh1/goctls/api/parser/g4/ast"
+	"github.com/bendh1/goctls/util/pathx"
 	"github.com/stretchr/testify/assert"
-	"github.com/suyuan32/goctls/api/parser/g4/ast"
-	"github.com/suyuan32/goctls/util/pathx"
 )
 
 var (
 	normalAPI = `
 	syntax="v1"
-	
+
 	info (
 		foo: bar
 	)
@@ -184,7 +184,7 @@ func TestApiParser(t *testing.T) {
 
 		_, err = parser.ParseContent(fmt.Sprintf(`
 		import "%s"
-		
+
 		service foo-api{
 			@handler foo
 			post /foo
@@ -199,7 +199,7 @@ func TestApiParser(t *testing.T) {
 		service foo-api{
 			@handler foo
 			post /foo
-			
+
 			@handler foo
 			post /bar
 		}
@@ -228,7 +228,7 @@ func TestApiParser(t *testing.T) {
 		service foo-api{
 			@handler foo
 			post /foo
-			
+
 			@handler bar
 			post /foo
 		}
@@ -267,7 +267,7 @@ func TestApiParser(t *testing.T) {
 
 		_, err = parser.ParseContent(fmt.Sprintf(`
 		import "%s"
-		
+
 		type Foo bool
 		`, file))
 		assert.Error(t, err)

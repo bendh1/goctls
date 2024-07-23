@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"github.com/suyuan32/goctls/api/parser/g4/gen/api"
+	"github.com/bendh1/goctls/api/parser/g4/gen/api"
 )
 
 // ImportExpr defines import syntax for api

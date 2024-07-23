@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/bendh1/goctls/pkg/parser/api/assertx"
+	"github.com/bendh1/goctls/pkg/parser/api/parser"
 	"github.com/stretchr/testify/assert"
-	"github.com/suyuan32/goctls/pkg/parser/api/assertx"
-	"github.com/suyuan32/goctls/pkg/parser/api/parser"
 )
 
 type formatData struct {
@@ -553,9 +553,9 @@ type /*bb*/ A /*cc*/ = /*dd*/ int // ee`,
 			},
 			{
 				input: `/*aa*/
-type 
+type
 /*bb*/
-A 
+A
 /*cc*/
 int`,
 				expected: `/*aa*/
@@ -590,8 +590,8 @@ interface{}
 type /*bb*/ any /*cc*/ interface{} // dd`,
 			},
 			{
-				input: `/*aa*/type 
-/*bb*/any 
+				input: `/*aa*/type
+/*bb*/any
 /*cc*/interface{} // dd`,
 				expected: `/*aa*/
 type
@@ -601,9 +601,9 @@ any
 interface{} // dd`,
 			},
 			{
-				input: `/*aa*/type 
+				input: `/*aa*/type
 // bb
-any 
+any
 // cc
 interface{} // dd`,
 				expected: `/*aa*/
@@ -717,8 +717,8 @@ map[string][2]int // bb`,
 				expected: `type P = *int`,
 			},
 			{
-				input: `type 
-P 
+				input: `type
+P
 *int
 `,
 				expected: `type P *int`,
@@ -878,8 +878,8 @@ int`,
 				expected: `type S = []map[string]int`,
 			},
 			{
-				input: `type S [	]	
-map	[	string	]	
+				input: `type S [	]
+map	[	string	]
 int`,
 				expected: `type S []map[string]int`,
 			},
@@ -993,7 +993,7 @@ S // ee
 			{
 				input: `/*aa*/type// bb
 // cc
-/*dd*/S// ee 
+/*dd*/S// ee
 /*ff*/[//
 /*xx*/]//
 /*xx*/*//

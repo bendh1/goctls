@@ -3,11 +3,12 @@ package generator
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
-	"github.com/suyuan32/goctls/rpc/execx"
-	"github.com/suyuan32/goctls/util/format"
 	"path/filepath"
 	"strings"
+
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/duke-git/lancet/v2/fileutil"
 )
 
 const initEntCodeTpl string = `    if err := l.svcCtx.DB.Schema.Create(l.ctx, schema.WithForeignKeys(false)); err != nil {

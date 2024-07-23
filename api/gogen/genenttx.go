@@ -4,8 +4,8 @@ import (
 	_ "embed"
 	"path/filepath"
 
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 //go:embed enttx.tpl

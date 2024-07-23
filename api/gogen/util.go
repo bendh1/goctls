@@ -12,10 +12,10 @@ import (
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 
-	"github.com/suyuan32/goctls/api/spec"
-	"github.com/suyuan32/goctls/api/util"
-	"github.com/suyuan32/goctls/pkg/golang"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/api/spec"
+	"github.com/bendh1/goctls/api/util"
+	"github.com/bendh1/goctls/pkg/golang"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 type fileGenConfig struct {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/suyuan32/goctls/pkg/env"
+	"github.com/bendh1/goctls/pkg/env"
 )
 
 var errorFormat = `goctl error: %+v

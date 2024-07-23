@@ -1,8 +1,8 @@
 package parser
 
 import (
-	"github.com/suyuan32/goctls/pkg/parser/api/ast"
-	"github.com/suyuan32/goctls/pkg/parser/api/placeholder"
+	"github.com/bendh1/goctls/pkg/parser/api/ast"
+	"github.com/bendh1/goctls/pkg/parser/api/placeholder"
 )
 
 type filterBuilder struct {

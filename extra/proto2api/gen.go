@@ -16,16 +16,17 @@ package proto2api
 
 import (
 	"fmt"
+	"path/filepath"
+	"strings"
+
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/protox"
 	set "github.com/duke-git/lancet/v2/datastructure/set"
 	"github.com/duke-git/lancet/v2/fileutil"
 	"github.com/gookit/color"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/protox"
-	"path/filepath"
-	"strings"
 )
 
 var (

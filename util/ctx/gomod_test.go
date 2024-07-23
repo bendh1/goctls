@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/bendh1/goctls/util/pathx"
 	"github.com/stretchr/testify/assert"
-	"github.com/suyuan32/goctls/rpc/execx"
-	"github.com/suyuan32/goctls/util/pathx"
 	"github.com/zeromicro/go-zero/core/stringx"
 )
 

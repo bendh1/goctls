@@ -1,8 +1,8 @@
 package proto
 
 import (
+	"github.com/bendh1/goctls/rpc/parser"
 	"github.com/duke-git/lancet/v2/slice"
-	"github.com/suyuan32/goctls/rpc/parser"
 )
 
 func SortImport(data map[string]parser.Import) (result []string) {

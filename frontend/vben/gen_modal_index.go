@@ -2,9 +2,10 @@ package vben
 
 import (
 	"fmt"
-	"github.com/iancoleman/strcase"
-	"github.com/suyuan32/goctls/util"
 	"path/filepath"
+
+	"github.com/bendh1/goctls/util"
+	"github.com/iancoleman/strcase"
 )
 
 func genModalIndex(g *GenContext) error {

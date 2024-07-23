@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/suyuan32/goctls/util/pathx"
-	"github.com/suyuan32/goctls/vars"
+	"github.com/bendh1/goctls/util/pathx"
+	"github.com/bendh1/goctls/vars"
 )
 
 // RunFunc defines a function type of Run function

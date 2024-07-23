@@ -3,13 +3,14 @@ package schema
 import (
 	_ "embed"
 	"errors"
-	"github.com/duke-git/lancet/v2/fileutil"
-	"github.com/gookit/color"
-	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/util/format"
 	"path/filepath"
 	"strings"
 	"text/template"
+
+	"github.com/bendh1/goctls/util/format"
+	"github.com/duke-git/lancet/v2/fileutil"
+	"github.com/gookit/color"
+	"github.com/spf13/cobra"
 )
 
 var (

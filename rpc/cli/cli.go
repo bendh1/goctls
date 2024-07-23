@@ -8,12 +8,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/suyuan32/goctls/rpc/generator"
-	"github.com/suyuan32/goctls/rpc/generator/ent"
-	"github.com/suyuan32/goctls/util"
-	"github.com/suyuan32/goctls/util/console"
-	"github.com/suyuan32/goctls/util/format"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/rpc/generator"
+	"github.com/bendh1/goctls/rpc/generator/ent"
+	"github.com/bendh1/goctls/util"
+	"github.com/bendh1/goctls/util/console"
+	"github.com/bendh1/goctls/util/format"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 var (

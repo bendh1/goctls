@@ -17,16 +17,17 @@ package initlogic
 import (
 	_ "embed"
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
 	"os"
 	"path/filepath"
 	"strings"
 	"text/template"
 
+	"github.com/duke-git/lancet/v2/fileutil"
+
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 
-	"github.com/suyuan32/goctls/util/console"
+	"github.com/bendh1/goctls/util/console"
 )
 
 //go:embed core.tpl

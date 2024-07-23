@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/suyuan32/goctls/plugin"
+	"github.com/bendh1/goctls/plugin"
 )
 
 func main() {

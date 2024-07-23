@@ -1,10 +1,10 @@
 package rpc
 
 import (
+	"github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/internal/cobrax"
+	"github.com/bendh1/goctls/rpc/cli"
 	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/internal/cobrax"
-	"github.com/suyuan32/goctls/rpc/cli"
 )
 
 var (

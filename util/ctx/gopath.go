@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 // projectFromGoPath is used to find the main module and project file path

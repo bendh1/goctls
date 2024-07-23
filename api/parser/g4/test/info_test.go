@@ -3,9 +3,9 @@ package test
 import (
 	"testing"
 
+	"github.com/bendh1/goctls/api/parser/g4/ast"
+	"github.com/bendh1/goctls/api/parser/g4/gen/api"
 	"github.com/stretchr/testify/assert"
-	"github.com/suyuan32/goctls/api/parser/g4/ast"
-	"github.com/suyuan32/goctls/api/parser/g4/gen/api"
 )
 
 var infoAccept = func(p *api.ApiParserParser, visitor *ast.ApiVisitor) any {
@@ -117,9 +117,9 @@ line"`),
 		}))
 
 		v, err = parser.Accept(infoAccept, `
-			info( 
+			info(
 				// doc
-				title: foo 
+				title: foo
 				// doc
 				author: bar
 			)
@@ -171,7 +171,7 @@ line"`),
 
 		_, err = parser.Accept(infoAccept, `
 			info(
-				foo : new 
+				foo : new
 line
 			)
 		`)

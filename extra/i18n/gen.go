@@ -16,11 +16,12 @@ package i18n
 
 import (
 	"errors"
+
 	"github.com/gookit/color"
 
 	"github.com/spf13/cobra"
 
-	"github.com/suyuan32/goctls/extra/i18n/api"
+	"github.com/bendh1/goctls/extra/i18n/api"
 )
 
 var (

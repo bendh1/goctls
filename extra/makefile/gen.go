@@ -17,17 +17,18 @@ package makefile
 import (
 	"bytes"
 	_ "embed"
-	"github.com/duke-git/lancet/v2/fileutil"
-	"github.com/gookit/color"
 	"path/filepath"
 	"strings"
 	"text/template"
+
+	"github.com/duke-git/lancet/v2/fileutil"
+	"github.com/gookit/color"
 
 	"github.com/iancoleman/strcase"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/suyuan32/goctls/util/format"
+	"github.com/bendh1/goctls/util/format"
 )
 
 //go:embed makefile.tpl

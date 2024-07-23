@@ -3,11 +3,12 @@ package upgrade
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
-	"github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/rpc/execx"
 	"path/filepath"
 	"strings"
+
+	"github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/rpc/execx"
+	"github.com/duke-git/lancet/v2/fileutil"
 )
 
 func upgradeDependencies(workDir string) error {

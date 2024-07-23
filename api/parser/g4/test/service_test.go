@@ -3,9 +3,9 @@ package test
 import (
 	"testing"
 
+	"github.com/bendh1/goctls/api/parser/g4/ast"
+	"github.com/bendh1/goctls/api/parser/g4/gen/api"
 	"github.com/stretchr/testify/assert"
-	"github.com/suyuan32/goctls/api/parser/g4/ast"
-	"github.com/suyuan32/goctls/api/parser/g4/gen/api"
 )
 
 func TestBody(t *testing.T) {
@@ -464,7 +464,7 @@ func TestAtServer(t *testing.T) {
 			foo2: "bar2" // bar
 			/**foo*/
 			foo3: "foo
-			bar" /**bar*/		
+			bar" /**bar*/
 		)
 		`)
 		assert.Nil(t, err)
@@ -540,7 +540,7 @@ func TestServiceSpec(t *testing.T) {
 			foo2: "bar2" // bar
 			/**foo*/
 			foo3: "foo
-			bar" /**bar*/		
+			bar" /**bar*/
 		)
 		service foo-api{
 			@doc("foo")

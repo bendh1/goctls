@@ -1,16 +1,16 @@
 package api
 
 import (
+	"github.com/bendh1/goctls/api/apigen"
+	"github.com/bendh1/goctls/api/docgen"
+	"github.com/bendh1/goctls/api/format"
+	"github.com/bendh1/goctls/api/gogen"
+	"github.com/bendh1/goctls/api/new"
+	"github.com/bendh1/goctls/api/validate"
+	"github.com/bendh1/goctls/config"
+	"github.com/bendh1/goctls/internal/cobrax"
+	"github.com/bendh1/goctls/plugin"
 	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/api/apigen"
-	"github.com/suyuan32/goctls/api/docgen"
-	"github.com/suyuan32/goctls/api/format"
-	"github.com/suyuan32/goctls/api/gogen"
-	"github.com/suyuan32/goctls/api/new"
-	"github.com/suyuan32/goctls/api/validate"
-	"github.com/suyuan32/goctls/config"
-	"github.com/suyuan32/goctls/internal/cobrax"
-	"github.com/suyuan32/goctls/plugin"
 )
 
 var (

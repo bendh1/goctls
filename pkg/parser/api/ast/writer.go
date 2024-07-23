@@ -7,8 +7,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/suyuan32/goctls/pkg/parser/api/token"
-	"github.com/suyuan32/goctls/util"
+	"github.com/bendh1/goctls/pkg/parser/api/token"
+	"github.com/bendh1/goctls/util"
 )
 
 const (

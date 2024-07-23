@@ -11,12 +11,12 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/bendh1/goctls/api/parser"
+	"github.com/bendh1/goctls/api/util"
+	"github.com/bendh1/goctls/pkg/env"
+	apiF "github.com/bendh1/goctls/pkg/parser/api/format"
+	"github.com/bendh1/goctls/util/pathx"
 	"github.com/spf13/cobra"
-	"github.com/suyuan32/goctls/api/parser"
-	"github.com/suyuan32/goctls/api/util"
-	"github.com/suyuan32/goctls/pkg/env"
-	apiF "github.com/suyuan32/goctls/pkg/parser/api/format"
-	"github.com/suyuan32/goctls/util/pathx"
 	"github.com/zeromicro/go-zero/core/errorx"
 )
 

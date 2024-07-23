@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"github.com/suyuan32/goctls/extra/middleware/api"
-	"github.com/suyuan32/goctls/internal/cobrax"
+	"github.com/bendh1/goctls/extra/middleware/api"
+	"github.com/bendh1/goctls/internal/cobrax"
 )
 
 var (

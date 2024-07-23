@@ -3,19 +3,20 @@ package generator
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/fileutil"
-	new2 "github.com/suyuan32/goctls/api/new"
 	"path/filepath"
 	"strings"
 
+	new2 "github.com/bendh1/goctls/api/new"
+	"github.com/duke-git/lancet/v2/fileutil"
+
 	"github.com/gookit/color"
 
-	"github.com/suyuan32/goctls/rpc/execx"
-	proto2 "github.com/suyuan32/goctls/rpc/generator/proto"
-	"github.com/suyuan32/goctls/rpc/parser"
-	"github.com/suyuan32/goctls/util/console"
-	"github.com/suyuan32/goctls/util/ctx"
-	"github.com/suyuan32/goctls/util/pathx"
+	"github.com/bendh1/goctls/rpc/execx"
+	proto2 "github.com/bendh1/goctls/rpc/generator/proto"
+	"github.com/bendh1/goctls/rpc/parser"
+	"github.com/bendh1/goctls/util/console"
+	"github.com/bendh1/goctls/util/ctx"
+	"github.com/bendh1/goctls/util/pathx"
 )
 
 type ZRpcContext struct {

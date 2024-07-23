@@ -13,8 +13,8 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/bendh1/goctls/internal/version"
 	"github.com/gookit/color"
-	"github.com/suyuan32/goctls/internal/version"
 )
 
 // NL defines a new line.
