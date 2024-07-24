@@ -8,7 +8,7 @@ import (
 	"{{.projectPath}}{{.importPrefix}}/types/{{.projectName}}"
 
 {{if .useUUID}}    "github.com/suyuan32/simple-admin-common/utils/uuidx"
-{{end}}{{if .HasCreated}}	"github.com/suyuan32/simple-admin-common/utils/pointy"{{end}}
+{{end}}
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -33,9 +33,9 @@ func (l *Get{{.modelName}}ByIdLogic) Get{{.modelName}}ById(in *{{.projectName}}.
 	}
 
 	return &{{.projectName}}.{{.modelName}}Info{
-		Id:          {{if .useUUID}}pointy.GetPointer(result.ID.String()){{else}}&result.ID{{end}},{{if .HasCreated}}
-		CreatedAt:    pointy.GetPointer(result.CreatedAt.UnixMilli()),
-		UpdatedAt:    pointy.GetPointer(result.UpdatedAt.UnixMilli()),{{end}}
+		Id:          {{if .useUUID}}pointy.GetPointer(result.ID.String()){{else}}result.ID{{end}},{{if .HasCreated}}
+		CreatedAt:    result.CreatedAt.UnixMilli(),
+		UpdatedAt:    result.UpdatedAt.UnixMilli(),{{end}}
 {{.listData}}
 	}, nil
 }

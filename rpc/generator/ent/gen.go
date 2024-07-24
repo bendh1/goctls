@@ -19,12 +19,13 @@ import (
 	_ "embed"
 	"errors"
 	"fmt"
-	"github.com/gookit/color"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 	"text/template"
+
+	"github.com/gookit/color"
 
 	"github.com/suyuan32/goctls/util/console"
 
@@ -258,7 +259,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 			}
 			continue
 		} else if entx.IsOnlyEntType(v.Info.Type.String()) {
-			singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(*in.%s)))\n\t}\n",
+			singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != 0 {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(in.%s)))\n\t}\n",
 				parser.CamelCase(v.Name),
 				parser.CamelCase(v.Name),
 				v.Info.Type.String(),
@@ -277,7 +278,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 							parser.CamelCase(v.Name)))
 						hasUUID = true
 					} else {
-						singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(*in.%s)))\n\t}\n",
+						singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(in.%s)))\n\t}\n",
 							parser.CamelCase(v.Name),
 							entx.ConvertSpecificNounToUpper(v.Name),
 							v.Info.Type.String(),
@@ -286,12 +287,12 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 						hasSingle = true
 					}
 				} else {
-					setLogic.WriteString(fmt.Sprintf("\t\t\tSetNotNil%s(in.%s).\n", entx.ConvertSpecificNounToUpper(v.Name),
+					setLogic.WriteString(fmt.Sprintf("\t\t\tSetNotNil%s(&in.%s).\n", entx.ConvertSpecificNounToUpper(v.Name),
 						parser.CamelCase(v.Name)))
 				}
 			} else {
 				if entx.IsGoTypeNotPrototype(v.Info.Type.String()) {
-					singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != nil {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(*in.%s)))\n\t}\n",
+					singleSets = append(singleSets, fmt.Sprintf("\tif in.%s != 0 {\n\t\tquery.SetNotNil%s(pointy.GetPointer(%s(in.%s)))\n\t}\n",
 						parser.CamelCase(v.Name),
 						parser.CamelCase(v.Name),
 						v.Info.Type.String(),
@@ -299,7 +300,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 					)
 					hasSingle = true
 				} else {
-					setLogic.WriteString(fmt.Sprintf("\t\t\tSetNotNil%s(in.%s).\n", parser.CamelCase(v.Name),
+					setLogic.WriteString(fmt.Sprintf("\t\t\tSetNotNil%s(&in.%s).\n", parser.CamelCase(v.Name),
 						parser.CamelCase(v.Name)))
 				}
 			}
@@ -392,7 +393,7 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 		if v.Info.Type.String() == "string" && !strings.Contains(strings.ToLower(v.Name), "uuid") &&
 			count < g.SearchKeyNum && !entx.IsBaseProperty(v.Name) {
 			camelName := parser.CamelCase(v.Name)
-			predicateData.WriteString(fmt.Sprintf("\tif in.%s != nil {\n\t\tpredicates = append(predicates, %s.%sContains(*in.%s))\n\t}\n",
+			predicateData.WriteString(fmt.Sprintf("\tif in.%s != \"\" {\n\t\tpredicates = append(predicates, %s.%sContains(in.%s))\n\t}\n",
 				camelName, strings.ToLower(schema.Name), entx.ConvertSpecificNounToUpper(v.Name), camelName))
 			count++
 		}
@@ -415,35 +416,35 @@ func GenCRUDData(g *GenEntLogicContext, projectCtx *ctx.ProjectContext, schema *
 			}
 
 			if entx.IsUUIDType(v.Info.Type.String()) {
-				listData.WriteString(fmt.Sprintf("\t\t\t%s:\tpointy.GetPointer(v.%s.String()),%s", nameCamelCase,
+				listData.WriteString(fmt.Sprintf("\t\t\t%s:\tv.%s.String(),%s", nameCamelCase,
 					entx.ConvertSpecificNounToUpper(nameCamelCase), endString))
 			} else if entx.IsOnlyEntType(v.Info.Type.String()) {
-				listData.WriteString(fmt.Sprintf("\t\t\t%s:\tpointy.GetPointer(%s(v.%s)),%s", nameCamelCase,
+				listData.WriteString(fmt.Sprintf("\t\t\t%s:\t%s(v.%s),%s", nameCamelCase,
 					entx.ConvertOnlyEntTypeToGoType(v.Info.Type.String()),
 					entx.ConvertSpecificNounToUpper(nameCamelCase), endString))
 			} else if entx.IsTimeProperty(v.Info.Type.String()) {
 				if v.Optional {
-					listData.WriteString(fmt.Sprintf("\t\t\t%s:\tpointy.GetUnixMilliPointer(v.%s.UnixMilli()),%s", nameCamelCase,
+					listData.WriteString(fmt.Sprintf("\t\t\t%s:\tv.%s.UnixMilli(),%s", nameCamelCase,
 						entx.ConvertSpecificNounToUpper(nameCamelCase), endString))
 				} else {
-					listData.WriteString(fmt.Sprintf("\t\t\t%s:\tpointy.GetPointer(v.%s.UnixMilli()),%s", nameCamelCase,
+					listData.WriteString(fmt.Sprintf("\t\t\t%s:\tv.%s.UnixMilli(),%s", nameCamelCase,
 						entx.ConvertSpecificNounToUpper(nameCamelCase), endString))
 				}
 			} else {
 				if entx.IsUpperProperty(v.Name) {
 					if entx.IsGoTypeNotPrototype(v.Info.Type.String()) {
-						listData.WriteString(fmt.Sprintf("\t\t\t%s:\tpointy.GetPointer(%s(v.%s)),%s", nameCamelCase,
+						listData.WriteString(fmt.Sprintf("\t\t\t%s:\t%s(v.%s),%s", nameCamelCase,
 							entx.ConvertEntTypeToGotype(v.Info.Type.String()), entx.ConvertSpecificNounToUpper(v.Name), endString))
 					} else {
-						listData.WriteString(fmt.Sprintf("\t\t\t%s:\t&v.%s,%s", nameCamelCase,
+						listData.WriteString(fmt.Sprintf("\t\t\t%s:\tv.%s,%s", nameCamelCase,
 							entx.ConvertSpecificNounToUpper(v.Name), endString))
 					}
 				} else {
 					if entx.IsGoTypeNotPrototype(v.Info.Type.String()) {
-						listData.WriteString(fmt.Sprintf("\t\t\t%s:\tpointy.GetPointer(%s(v.%s)),%s", nameCamelCase,
+						listData.WriteString(fmt.Sprintf("\t\t\t%s:\t%s(v.%s),%s", nameCamelCase,
 							entx.ConvertEntTypeToGotype(v.Info.Type.String()), nameCamelCase, endString))
 					} else {
-						listData.WriteString(fmt.Sprintf("\t\t\t%s:\t&v.%s,%s", nameCamelCase,
+						listData.WriteString(fmt.Sprintf("\t\t\t%s:\tv.%s,%s", nameCamelCase,
 							nameCamelCase, endString))
 					}
 				}
